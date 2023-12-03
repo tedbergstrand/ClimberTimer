@@ -3,7 +3,7 @@
 
 __Note: This is prototype software.__
 
-- ClimberTimer offers an interface for your climbing training timers.
+- ClimberTimer offers a web interface for your climbing training timers.
 
 - It is pre-populated with a version of the exercises detailed in Alex Barrows' [Training for Sport Climbing Paper](https://www.trainingbeta.com/wp-content/uploads/2015/05/1.-Alex-Barrows-Training-Doc-V2-for-training-beta.pdf). 
 
