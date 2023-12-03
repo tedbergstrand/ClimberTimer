@@ -114,6 +114,31 @@ button:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
 }
 
+/* Select Boxes */
+
+select {
+  display: block;
+  width: 100%; 
+  max-width: 200px;
+  margin: 0 auto;
+  padding: 12px 12px;  
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 16px;
+  text-align: center;  
+}
+
+select option {
+  padding: 12px 12px; 
+}
+
+select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+
 /* Timer Display */
 #timerDisplay {
     font-size: 1.8rem;
@@ -159,6 +184,11 @@ button:hover {
     font-size: 1.2rem;
     margin-bottom: 5px;
     color: #1a73e8;
+}
+
+/* Hide Sections From Exercise*/
+#pModifications, #pMode, #pEnergySystem, #pFocus, #pFrequency, #pFacility {
+    display:none;
 }
 
 /* Footer */
@@ -237,39 +267,11 @@ footer {
         padding: 10px;
     }
 
-}
+    header h1 {
+        margin-right: 25px;
+    }
 
-/* Hide Sections */
-#pModifications, #pMode, #pEnergySystem, #pFocus, #pFrequency, #pFacility {
-    display:none;
-}
-
-
-
-@media (max-width: 768px) {
-  .exercise-detail {
-    width: 100%; 
-  }
-}
-
-select {
-  display: block;
-  width: 100%; 
-  max-width: 200px;
-  margin: 0 auto;
-  padding: 12px 12px;  
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background: #fff;
-  font-size: 16px;
-  text-align: center;  
-}
-
-select option {
-  padding: 12px 12px; 
-}
-
-select:focus {
-  outline: none;
-  border-color: #007bff;
+   .exercise-detail {
+        width: 100%; 
+    }
 }
