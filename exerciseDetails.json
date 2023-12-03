@@ -1,0 +1,267 @@
+[
+    {
+    "name": "ARC Training",
+    "energySystem": "Aerobic Capacity", 
+    "focus": "Capacity",
+    "tips": "Try this on the bouldering wall in the Kids' Room. Maintain a steady rhythm, focusing on efficient movement and precise foot placements. Avoid overgripping and use straight arms to conserve energy.",  
+    "gradeDiff": -4,  
+    "objective": "Enhance resistance to pump and improve endurance through sustained, moderate-intensity climbing",
+    "description": "Climb continuously for 20-40 minutes, focusing on maintaining a consistent intensity. Aim for a steady, manageable level of exertion, with an intensity that allows for continuous movement without excessive pump.",
+    "intensity": "Sustained light pump. Exertion: 2-3 out of 10",  
+    "mode": "Continuous climbing on routes or traversing on a bouldering wall, utilizing large, positive holds.",
+    "modifications": [
+      {"lessIntense": {"gradeDiff": -4, "intensity": "Reduce exertion to 1-2/10, focusing on smoother movements and better energy conservation"}},
+      {"moreIntense": {"gradeDiff": -2, "intensity": "Increase exertion to 3-4/10, ensuring continuous movement with a slightly higher intensity"}}
+    ],
+    "frequency": "2-3 sessions per week during base phase",  
+    "facility": "Roped climbing wall or bouldering wall suitable for continuous movement",
+    "repTime": 1200,
+    "repAmount": 1,
+    "repRest": 0,
+    "setAmount": 2, 
+    "setRest": 600  
+    },
+
+    {
+    "name": "10 On - 10 Off",
+    "energySystem": "Aerobic Capacity",
+    "focus": "Capacity", 
+    "tips": "Climb smoothly using momentum to avoid overgripping. Place feet precisely without hesitation. Resist pumping out by creating tension with straight arms.",
+    "gradeDiff": -3,    
+    "objective": "Improve aerobic capacity through sustained climbing at a steady, moderate intensity. Focus on efficiency and technique.",
+    "description": "Climb continuously for 10 minutes, then rest for 10 minutes. Complete 4 sets total. Intensity should be a manageable pump around 6/10 effort. Use large holds on steep walls for consistency. Control breathing with your diaphragm.",
+    "intensity": "Sustained light pump. Exertion: 2-3 out of 10", 
+    "mode": "Routes or traversing on an empty bouldering wall.",
+    "modifications": [
+      {"lessIntense": {"repTime": 900, "intensity": "Reduce exertion to 1-2/10"}},     
+      {"moreIntense": {"gradeDiff": -2, "intensity": "Raise exertion to 3-4/10"}}
+    ],
+    "frequency": "2-3 sessions per week during base phase",
+    "facility": "Roped climbing wall or bouldering wall with traversal line",
+    "repTime": 600, 
+    "repAmount": 1,  
+    "repRest": 0,
+    "setAmount": 4,
+    "setRest": 600    
+  },
+  {
+    "name": "Up-Down Climbing",
+    "energySystem": "Aerobic Capacity", 
+   "focus": "Capacity",
+    "tips": "Move decisively between upward and downward sequences. Engage core fully to maintain position. Plan occasional shakes on bigger holds.",   
+    "gradeDiff": -2,
+    "objective": "Build mental stamina through reversed climbing on familiar terrain.",
+    "description": "Ascend then descend a known route/problem for 15 minutes straight. Intensity around 6/10 effort.",
+    "intensity": "Manageable pump. Exertion level around 5/10.",
+    "mode": "Choose a boulder or route you're familiar with. Climb it upwards, then try to reverse the movements to climb downwards. Repeat for 15 minutes without getting off the wall.",
+    "modifications": [
+      {"lessIntense": {"repTime": 600, "intensity": "Reduce exertion to 4/10"}},   
+      {"moreIntense": {"gradeDiff": -1,  "intensity": "Increase exertion to 7-8/10"}}
+    ],
+    "frequency": "1-2 sessions per week during base phase",
+    "facility": "Roped climbing wall or bouldering wall",
+    "repTime": 900,
+    "repAmount": 1,
+    "repRest": 0,
+    "setAmount": 1,
+    "setRest": 0
+  },
+  {
+    "name": "Circuits",
+    "energySystem": "Aerobic Power",
+    "focus": "Power",
+    "tips": "Commit to moves without hesitation. Use momentum and precise footwork. Increase challenge by moving more quickly and not allowing chalk-ups or shakeouts.",   
+    "gradeDiff": -1,
+    "objective": "Develop power endurance through sustained, high-intensity sequences.",
+    "description": "Climb circuits of ~30 moves with minimal rests to simulate outdoor climbing. Falls allowed but get back on immediately. Vary between static and dynamic styles. Do your best not to shake out. Pump around 8/10.",  
+    "intensity": "Pumped out of your mind by the final reps.",
+    "mode": "Set a circuit that simulates the sequence and style of an outdoor climb. No resting holds allowed.",
+    "modifications": [   
+      {"lessIntense": {"repAmount": 4, "intensity": "Reduce exertion to 6/10"}},     
+      {"moreIntense": {"gradeDiff": 1, "intensity": "Raise exertion toward 10/10"}}
+    ],
+    "frequency": "2 sessions per week during peak/performance phase",
+    "facility": "Lead climbing wall",
+    "repTime": 90,
+    "repAmount": 8, 
+    "repRest": 120,
+    "setAmount": 1,
+    "setRest": 0
+  },
+  {
+    "name": "On-the-Minute",
+    "energySystem": "Aerobic Power",
+    "focus": "Power",
+    "tips": "Use momentum and precise footwork to reduce pump. Can increase challenge by choosing longer problems.",   
+    "gradeDiff": -1,
+    "objective": "Enhance power endurance through timed interval climbing.",
+    "description": "Climb one problem at the begining of every minute. You have the rest of your minute to rest. Repeat for 8 reps & adjust set volume desired.",
+    "intensity": "Pumped out of your mind by the final reps.", 
+    "mode": "Bouldering. Start a new climb every minute.", 
+    "modifications": [
+      {"lessIntense": {"repAmount": 5, "intensity": "Reduce exertion to 7/10"}},  
+      {"moreIntense": {"gradeDiff": 1, "intensity": "Raise exertion to 9/10"}}
+    ],
+    "frequency": "2 sessions per week during peak/performance phase",
+    "facility": "Bouldering wall",
+    "repTime": 60, 
+    "repAmount": 8,
+    "repRest": 0,
+    "setAmount": 3,
+    "setRest": 300
+  },
+  {
+    "name": "4x4s (Boulder Edition)",
+    "energySystem": "Aerobic Power",
+    "focus": "Power",
+    "tips": "Commit to flashes. No hesitating or working cruxes - keep moving!",
+    "gradeDiff": -1,
+    "objective": "Build power endurance through back-to-back high intensity problems.",
+    "description": "Climb 4 dynamic, intense boulder problems consecutively without rest between. Take 4 minute rests between sets.",
+    "intensity": "Perceived exertion between 8/10 and 10/10. Heavy pump or powered out feeling, depending on problems.",
+    "mode": "Bouldering. Climb 4 problems consecutively without rest.",
+    "modifications": [  
+      {"lessIntense": {"setAmount": 3, "intensity": "Reduce exertion to 7/10"}},   
+      {"moreIntense": {"gradeDiff": 1, "intensity": "Raise exertion toward 10/10"}}
+    ],
+    "frequency": "2 sessions per week during peak/performance phase",  
+    "facility": "Bouldering wall",
+    "repTime": 120,
+    "repAmount": 1,
+    "repRest": 0, 
+    "setAmount": 4,
+    "setRest": 240    
+  },
+  {
+    "name": "Long Boulders",
+    "energySystem": "Anaerobic Capacity",
+    "focus": "Capacity",
+    "tips": "Aim to climb more statically than usual without rushing. Use rests to manage pump.",
+    "gradeDiff": 0.5,   
+    "objective": "Boost anaerobic capacity through sustained, near-maximal bouldering efforts.",
+    "description": "Climb 30-50s boulder problems with 12-15 moves. Rest 2-4x work time. Intensity around 9/10 effort with falls expected in later reps.",
+    "intensity": "Powered out feeling. Very high perceived exertion around 9/10.",
+    "mode": "Bouldering problems or circuits that push your limits.",
+    "modifications": [   
+      {"lessIntense": {"repAmount": 6, "intensity": "Reduce exertion to 7/10"}},   
+      {"moreIntense": {"gradeDiff": 1, "intensity": "Raise exertion toward failure"}}
+    ], 
+    "frequency": "1-2 sessions per week",  
+    "facility": "Bouldering wall",
+    "repTime": 40,
+    "repAmount": 6,
+    "repRest": 160,
+    "setAmount": 2,
+    "setRest": 600
+  },
+  {
+    "name": "Power Intervals",
+    "energySystem": "Anaerobic Capacity",
+    "focus": "Capacity",
+    "tips": "Breathe fully between efforts. Use optimal beta for efficiency - don't struggle with poor technique.",
+    "gradeDiff": 0.5,
+    "objective": "Increase power and lactate tolerance using max effort sequences.",
+    "description": "Climb 30-40s bouldering moves at true limit with 60s rests between. Expect repeated falls at cruxes while expanding current ability.",
+    "intensity": "Powered out feeling. True maximal perceived exertion (~10/10 effort).", 
+    "mode": "Bouldering problems or sequences that are at or near your limit.",
+    "modifications": [    
+      {"lessIntense": {"repAmount": 6, "intensity": "Reduce exertion to 8-9/10"}},
+      {"moreIntense": {"gradeDiff": 1, "intensity": "Extend duration toward failure"}}
+    ],
+    "frequency": "1-2 sessions per week",
+    "facility": "Bouldering wall",
+    "repTime": 35,
+    "repAmount": 8,
+    "repRest": 80,
+    "setAmount": 1,
+    "setRest": 0
+  },
+  {
+    "name": "Campus Bursts",
+    "energySystem": "Anaerobic Power",
+    "focus": "Power",
+    "tips": "Move consistently through the problem. Avoid pausing for rests or shakeouts.",
+    "gradeDiff": 0.5,
+    "objective": "Build power for short, intense bursts through campus-style training.",
+    "description": "Without using your feet, climb powerful, dynamic 6-8 move sequences for 20 seconds. Rest 3 minutes between reps.",
+    "intensity": "Powered out feeling. Explosive. Perceived exertion around 9/10.",
+    "mode": "Bouldering problems that emphasize dynamic and powerful movements.",
+    "modifications": [
+      {"lessIntense": {"repAmount": 5, "intensity": "Reduce exertion to 7/10"}},
+      {"moreIntense": {"gradeDiff": 1, "intensity": "Raise exertion toward failure"}} 
+    ],
+    "frequency": "1 session per week",
+    "facility": "Bouldering wall",    
+    "repTime": 20,
+    "repAmount": 8,
+    "repRest": 180,
+    "setAmount": 1,
+    "setRest": 0
+  },
+  {  
+    "name": "Maximal Intensity Climbs",
+    "energySystem": "Anaerobic Power",
+    "focus": "Power",
+    "tips": "Don't be afraid to change beta. Take video to watch later and see how you might improve.",
+    "gradeDiff": 1.5,
+    "objective": "Push power boundaries through repeated limit bouldering attempts.", 
+    "description": "10-15 second climbs with 3-5 moves at maximal effort-- slightly above your limit. Rest time is equal to climb time. Expect falls. Rest a full 10 minutes between sets. Try harder than you think is possible.",
+    "intensity": "Powered out feeling. True maximal perceived exertion (~10/10 effort).",
+    "mode": "Short bouldering problems or sequences that are slightly above your limit.",
+    "modifications": [    
+      {"lessIntense": {"setAmount": 3, "intensity": "Reduce exertion to 8-9/10"}},
+      {"moreIntense": {"gradeDiff": 2, "intensity": "Extend duration toward failure"}}
+    ],
+    "frequency": "1 session per week",
+    "facility": "Bouldering wall",
+    "repTime": 15,
+    "repAmount": 4,
+    "repRest": 15,   
+    "setAmount": 5,
+    "setRest": 600    
+  },
+  {
+    "name": "Dynamic Movements",
+    "energySystem": "Anaerobic Power",
+    "focus": "Power",
+    "tips": "Land in a controlled manner. Use momentum to maximize power. Engage core while airborne. Stop immediately if something feels tweaky.",
+    "gradeDiff": 1.5,   
+    "objective": "Focus on power development through dynamic, explosive movements.",
+    "description": "Practice maximally dynamic sequences between 5-10 seconds long. Emphasize huge dynos from off-balance positions.",
+    "intensity": "Powered out feeling. Maximal perceived exertion (~10/10 effort).",
+    "mode": "Bouldering problems or sequences emphasizing dynamic moves, jumps, or campusing.",
+    "modifications": [     
+      {"lessIntense": {"repAmount": 5, "intensity": "Reduce exertion to 8/10"}},   
+      {"moreIntense": {"gradeDiff": 2, "intensity": "Extend duration toward failure"}}
+    ],
+    "frequency": "1 session per week",
+    "facility": "Bouldering wall",  
+    "repTime": 8,
+    "repAmount": 8,
+    "repRest": 180,
+    "setAmount": 1,
+    "setRest": 0
+  },
+  {
+    "name": "Limit Bouldering",
+    "energySystem": "Strength",
+    "focus": "Max Strength",
+    "tips": "Look for other beta. Generate maximal tension and power.",   
+    "gradeDiff": 2,
+    "objective": "Push your boundaries by working on the hardest moves or sequences you can link together.",
+    "description": "Work on extremely challenging boulder moves, potentially at or beyond your limit. Expect falls and crux struggles. Rest 4-5 minutes between attempts.",
+    "intensity": "Supramaximal - at current limit or beyond.",
+    "mode": "Bouldering problems or sequences that you find extremely challenging, perhaps even currently impossible.",
+    "modifications": [     
+      {"lessIntense": {"repAmount": 4, "intensity": "Reduce toward maximal limit"}},
+      {"moreIntense": {"gradeDiff": 3, "intensity": "Extend beyond current ability"}}
+    ],
+    "frequency": "Up to 4 sessions per week",
+    "facility": "Bouldering wall", 
+    "repTime": 30,
+    "repAmount": 6,
+    "repRest": 300,
+    "setAmount": 1,
+    "setRest": 0    
+  }
+]

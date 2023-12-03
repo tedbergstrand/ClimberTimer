@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aerobic Power - ClimberTimer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>ClimberTimer</h1>
+<nav> 
+    <select id="nav" onchange="location = this.value;">
+        <option disabled selected>Select a page...</option>
+        <option value="index.html">Home</option>
+        <option value="aerobic-power.html">Aerobic Power</option>
+        <option value="aerobic-capacity.html">Aerobic Capacity</option>
+        <option value="anaerobic-capacity.html">Anaerobic Capacity</option>
+        <option value="anaerobic-power.html">Anaerobic Power</option>
+        <option value="strength.html">Strength</option>
+    </select>
+</nav>
+    </header>
+
+    <main>
+        <section>
+        <h2>Aerobic Power Training</h2>
+            <p>Aerobic power training enhances a climber's ability to perform at a higher intensity for a sustained period, crucial for extended challenging sections of a climb or a long boulder problem. It improves the rate at which oxygen is delivered to and is utilized by the muscles, allowing climbers to maintain a stronger pace without succumbing to fatigue quickly. This enhanced oxygen delivery is key for supporting sustained, strenuous climbing sections, enabling climbers to push through demanding parts of a route with greater efficiency. Additionally, improved aerobic power contributes to more effective recovery during short rests, helping climbers maintain their performance level throughout the climb.</p>
+        </section>
+
+        <section>
+            <h2>Exercises for Aerobic Power</h2>
+            <ul id="exerciseList" data-energy-system="Aerobic Power">
+                <!-- Exercises will be dynamically loaded here -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>2023 - Ted Bergstrand</p>
+    </footer>
+
+    <script src="loadExercises.js"></script>
+    <script>
+    function changeExercise(selectElement) {
+        const selectedExercise = selectElement.value;
+        const exerciseURL = `exercise.html?name=${encodeURIComponent(selectedExercise)}`;
+        window.location.href = exerciseURL;
+    };
+    </script>
+</body>
+</html>

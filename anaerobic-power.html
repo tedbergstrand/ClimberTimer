@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anaerobic Power - ClimberTimer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>ClimberTimer</h1>
+<nav> 
+    <select id="nav" onchange="location = this.value;">
+        <option disabled selected>Select a page...</option>
+        <option value="index.html">Home</option>
+        <option value="aerobic-power.html">Aerobic Power</option>
+        <option value="aerobic-capacity.html">Aerobic Capacity</option>
+        <option value="anaerobic-capacity.html">Anaerobic Capacity</option>
+        <option value="anaerobic-power.html">Anaerobic Power</option>
+        <option value="strength.html">Strength</option>
+    </select>
+</nav>
+    </header>
+
+    <main>
+        <section>
+        <h2>Anaerobic Power Training</h2>
+            <p>Anaerobic power is essential for climbers, particularly for executing extremely powerful and explosive movements required in advanced climbing and dynamic bouldering. This type of training enhances a climber's ability to exert maximum force in short bursts, ideal for tackling the most challenging moves like quick dynos or steep overhangs. By increasing anaerobic power, climbers can achieve higher levels of strength and speed in movements, essential for overcoming brief, intensely demanding sections of a climb. Additionally, improved anaerobic power allows climbers to perform these high-intensity actions more effectively before fatigue sets in, making it a critical aspect of climbing performance for short, powerful routes and problems.</p>
+        </section>
+
+        <section>
+            <h2>Exercises for Anaerobic Power</h2>
+            <ul id="exerciseList" data-energy-system="Anaerobic Power">
+                <!-- Exercises will be dynamically loaded here -->
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>2023 - Ted Bergstrand</p>
+    </footer>
+    <script src="loadExercises.js"></script>
+    <script>
+    function changeExercise(selectElement) {
+        const selectedExercise = selectElement.value;
+        const exerciseURL = `exercise.html?name=${encodeURIComponent(selectedExercise)}`;
+        window.location.href = exerciseURL;
+    };
+    </script>
+</body>
+</html>

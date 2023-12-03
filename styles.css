@@ -1,0 +1,275 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    text-align: center;
+}
+
+body {
+    background-color: #f0eff4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Enhanced Typography */
+body, button {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Consider San Francisco if available */
+    letter-spacing: 0.5px;
+}
+
+/* Header */
+/* Header */
+header {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically in the center */
+    justify-content: space-around; /* Evenly space out the h2 and nav */
+    padding: 0px 20px; /* Reduce vertical padding and add horizontal padding */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+header h2 {
+    /* Remove margin-right if not needed */
+}
+
+header #nav {
+    /* Existing styles */
+    margin: auto; /* Center the select within the nav */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    header {
+        justify-content: space-between; /* Adjust for smaller screens if needed */
+    }
+
+    /* Other responsive styles */
+}
+
+
+header h1 {
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+header h1 {
+    font-weight: 300; /* Lighter font-weight */
+}
+
+
+/* Main Content */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+h2 {
+    color: #333;
+    margin: 20px 0;
+    font-size: 1.5rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Buttons */
+button {
+    background-color: #1a73e8;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0f62fe;
+}
+
+button {
+    border-radius: 15px; /* More rounded corners */
+    padding: 15px 30px; /* Larger buttons */
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #005ecb;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Softer shadow */
+}
+
+/* Timer Display */
+#timerDisplay {
+    font-size: 1.8rem;
+    margin: 20px 0;
+    color: #333;
+}
+
+/* Exercise Detail Container */
+.exerciseDetailContainer {
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.exercise-detail {
+  background-color: #fff; 
+  border-radius: 12px;
+  box-shadow: none;
+  border: none;
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.exercise-detail h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.exercise-detail p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.exercise-detail strong {
+    font-weight: bold;
+    color: #333;
+}
+
+.exercise-detail h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #1a73e8;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+/* Grid Containers */
+.grid-container-three {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    margin-bottom: 0px;
+}
+
+.grid-container-two {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+.grid-container {
+    background-color: #fff; /* Clean white background */
+    border-radius: 12px; /* Smooth corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+    padding: 0px; /* Spacing inside the container */
+    margin: 10px auto; /* Center align and provide space around */
+    margin-top:0px;
+    margin-bottom:0px;
+    width:60%;
+    box-sizing: border-box; /* Include padding and borders in width and height */
+}
+
+/* Enhancing the look of exercise-detail inside grid-container */
+.grid-container .exercise-detail {
+    padding: 0px; /* Spacing inside each detail block */
+    /* border-bottom: 1px solid #eaeaea; /* Subtle separation between items */
+    color: #333; /* Font color for readability */
+    font-size: 1rem; /* Adjust font size as needed */
+    line-height: 1.4; /* Space between lines */
+}
+
+/* Last child in grid-container should not have a border */
+.grid-container .exercise-detail:last-child {
+    border-bottom: none;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+        width:100%;
+    }
+
+    .grid-container .exercise-detail {
+        padding: 8px; /* Adjust padding for smaller screens */
+    }
+
+    .grid-container-three,
+    .grid-container-two {
+        grid-column-gap: 0; /* Remove gap for smaller screens */
+    }
+
+    body {
+        padding: 0 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+}
+
+/* Hide Sections */
+#pModifications, #pMode, #pEnergySystem, #pFocus, #pFrequency, #pFacility {
+    display:none;
+}
+
+
+
+@media (max-width: 768px) {
+  .exercise-detail {
+    width: 100%; 
+  }
+}
+
+select {
+  display: block;
+  width: 100%; 
+  max-width: 200px;
+  margin: 0 auto;
+  padding: 12px 12px;  
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 16px;
+  text-align: center;  
+}
+
+select option {
+  padding: 12px 12px; 
+}
+
+select:focus {
+  outline: none;
+  border-color: #007bff;
+}

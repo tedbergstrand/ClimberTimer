@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClimberTimer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>ClimberTimer</h1>
+<nav> 
+    <select id="nav" onchange="location = this.value;">
+        <option disabled selected>Select a page...</option>
+        <option value="index.html">Home</option>
+        <option value="aerobic-power.html">Aerobic Power</option>
+        <option value="aerobic-capacity.html">Aerobic Capacity</option>
+        <option value="anaerobic-capacity.html">Anaerobic Capacity</option>
+        <option value="anaerobic-power.html">Anaerobic Power</option>
+        <option value="strength.html">Strength</option>
+    </select>
+</nav>
+    </header>
+
+    <main>
+        <h2>Select a Training Component to see a list of exercises.</h2>
+        <p>Be a better climber through deliberate practice. Give your full effort. Don't quit-- fall.</p>
+        <br>
+        <ul>
+                <li class="exercise-detail"><a href="aerobic-capacity.html">Aerobic Capacity</a></li>
+                <li class="exercise-detail"><a href="aerobic-power.html">Aerobic Power</a></li>
+                <li class="exercise-detail"><a href="anaerobic-capacity.html">Anaerobic Capacity</a></li>
+                <li class="exercise-detail"><a href="anaerobic-power.html">Anaerobic Power</a></li>
+                <li class="exercise-detail"><a href="strength.html">Strength</a></li>
+            </ul>
+        <br>
+        <p><strong>Note: </strong>Some exercises are meant to use multiples of climb time to determine rest. I've done my best to estimate a good average climb and rest time in these cases.</p>
+        <br>
+        <p>These timers are based on Alex Barrows' <a href="https://www.trainingbeta.com/wp-content/uploads/2015/05/1.-Alex-Barrows-Training-Doc-V2-for-training-beta.pdf">Training for Sport Climbing paper</a>. Do yourself a favor and read it.
+    </main>
+
+    <footer>
+        <p>2023 - Ted Bergstrand</p>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+    function changeExercise(selectElement) {
+        const selectedExercise = selectElement.value;
+        const exerciseURL = `exercise.html?name=${encodeURIComponent(selectedExercise)}`;
+        window.location.href = exerciseURL;
+    };
+    </script>
+</body>
+</html>

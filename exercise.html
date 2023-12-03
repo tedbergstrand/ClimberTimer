@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Timer - ClimberTimer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>ClimberTimer</h1>
+<nav> 
+    <select id="nav" onchange="location = this.value;">
+        <option disabled selected>Select a page...</option>
+        <option value="index.html">Home</option>
+        <option value="aerobic-power.html">Aerobic Power</option>
+        <option value="aerobic-capacity.html">Aerobic Capacity</option>
+        <option value="anaerobic-capacity.html">Anaerobic Capacity</option>
+        <option value="anaerobic-power.html">Anaerobic Power</option>
+        <option value="strength.html">Strength</option>
+    </select>
+</nav>
+    </header>
+
+    <div id="exerciseDetailsContainer">
+        <h2 id="exerciseName">Exercise Name</h2>
+        <p id="pDescription" class="exercise-detail"><strong>Description:</strong> <span id="description"></span></p>
+        <p id="pObjective" class="exercise-detail"><strong>Objective:</strong> <span id="objective"></span></p>
+        <p id="pIntensity" class="exercise-detail"><strong>Intensity:</strong> <span id="intensity"></span></p>
+        <p id="pEnergySystem" class="exercise-detail"><strong>Energy System:</strong> <span id="energySystem"></span></p>
+        <p id="pFocus" class="exercise-detail"><strong>Focus:</strong> <span id="focus"></span></p>
+        <p id="pTips" class="exercise-detail"><strong>Tips:</strong> <span id="tips"></span></p>
+        <p id="pGradeDiff" class="exercise-detail"><strong>Flash Grade Modifier:</strong> <span id="gradeDiff"></span></p>
+        <p id="pMode" class="exercise-detail"><strong>Mode:</strong> <span id="mode"></span></p>
+        <p id="pModifications" class="exercise-detail"><strong>Modifications:</strong> <span id="modifications"></span></p>
+        <p id="pFrequency" class="exercise-detail"><strong>Frequency:</strong> <span id="frequency"></span></p>
+        <p id="pFacility" class="exercise-detail"><strong>Facility:</strong> <span id="facility"></span></p>
+    <div class="grid-container">
+    <div class="grid-container-three">
+        <p id="pRepTime" class="exercise-detail"><strong>Rep Time:</strong> <span id="repTime"></span></p>
+        <p id="pRepAmount" class="exercise-detail"><strong>Rep Amount:</strong> <span id="repAmount"></span></p>
+        <p id="pRepRest" class="exercise-detail"><strong>Rep Rest:</strong> <span id="repRest"></span></p>
+    </div>
+
+    <div class="grid-container-two">
+        <p id="pSetAmount" class="exercise-detail"><strong>Set Amount:</strong> <span id="setAmount"></span></p>
+        <p id="pSetRest" class="exercise-detail"><strong>Set Rest:</strong> <span id="setRest"></span></p>
+    </div>
+</div>
+    </div>
+
+    <div>
+        <br>
+        <button onclick="startTimer()">Start</button>
+        <button onclick="stopTimer()">Stop</button>
+        <div id="timerDisplay"></div>
+                <select id="protocolSelect" onchange="changeExercise(this)">
+            <!-- Options will be populated by JavaScript -->
+        </select>
+        <br>
+    </div>
+    <footer>
+        <p>2023 - Ted Bergstrand</p>
+    </footer>
+    <script src="timer.js"></script>
+    <script>
+// Parse the exercise name from the URL query string
+const urlParams = new URLSearchParams(window.location.search);
+const exerciseName = urlParams.get('name'); // Changed from 'exercise' to 'name'
+
+// Fetch exercise details from JSON file
+fetch('exerciseDetails.json')
+    .then(response => response.json())
+    .then(data => {
+        const exercise = data.find(item => item.name === exerciseName);
+        if (exercise) {
+            for (const key in exercise) {
+                if (key === 'modifications') {
+                    document.getElementById(key).textContent = JSON.stringify(exercise[key], null, 2);
+                } else if (document.getElementById(key)) {
+                    document.getElementById(key).textContent = exercise[key];
+                }
+            }
+
+            // Set the exercise name
+            document.getElementById('exerciseName').textContent = exerciseName;
+
+        // Populate protocolSelect options and set the current exercise
+        let defaultOption = document.createElement('option');
+        defaultOption.textContent = 'Select an Exercise';
+        defaultOption.disabled = true;
+        defaultOption.selected = true;
+        document.getElementById('protocolSelect').appendChild(defaultOption);
+
+        data.forEach(item => {
+            let option = document.createElement('option');
+            option.value = item.name;
+            option.textContent = item.name;
+            document.getElementById('protocolSelect').appendChild(option);
+        });
+        document.getElementById('protocolSelect').value = exerciseName;
+
+        // Trigger updateTimerSettings when the page loads
+        updateTimerSettings();
+        } else {
+            console.error('Exercise not found');
+        }
+    })
+    .catch(error => console.error('Error:', error));
+
+
+    function changeExercise(selectElement) {
+    const selectedExercise = selectElement.value;
+    const exerciseURL = `exercise.html?name=${encodeURIComponent(selectedExercise)}`;
+    window.location.href = exerciseURL;
+};
+
+
+    </script>
+</body>
+</html>

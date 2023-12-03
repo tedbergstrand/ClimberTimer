@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aerobic Capacity - ClimberTimer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>ClimberTimer</h1>
+<nav> 
+    <select id="nav" onchange="location = this.value;">
+        <option disabled selected>Select a page...</option>
+        <option value="index.html">Home</option>
+        <option value="aerobic-power.html">Aerobic Power</option>
+        <option value="aerobic-capacity.html">Aerobic Capacity</option>
+        <option value="anaerobic-capacity.html">Anaerobic Capacity</option>
+        <option value="anaerobic-power.html">Anaerobic Power</option>
+        <option value="strength.html">Strength</option>
+    </select>
+</nav>
+    </header>
+    <main>
+        <section>
+        <h2>Aerobic Capacity Training</h2>
+        <p>Developing aerobic capacity is crucial for climbers, enhancing endurance on long routes and aiding in faster recovery during rests. It increases the efficiency of oxygen utilization in muscles, delaying fatigue and reducing the buildup of lactic acid. This is especially beneficial in maintaining consistent energy levels throughout a climb and ensuring effective recovery between attempts in bouldering. Ultimately, a higher aerobic capacity allows climbers to perform more effectively across various climbing disciplines, making it a key aspect of climbing fitness.</p>
+        </section>
+
+        <section>
+            <h2>Exercises for Aerobic Capacity</h2>
+            <ul id="exerciseList" data-energy-system="Aerobic Capacity">
+                <!-- Exercises will be dynamically loaded here -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>2023 - Ted Bergstrand</p>
+    </footer>
+
+    <script src="loadExercises.js"></script>
+    <script>
+    function changeExercise(selectElement) {
+        const selectedExercise = selectElement.value;
+        const exerciseURL = `exercise.html?name=${encodeURIComponent(selectedExercise)}`;
+        window.location.href = exerciseURL;
+    };
+    </script>
+</body>
+</html>

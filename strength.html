@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strength Training - ClimberTimer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>ClimberTimer</h1>
+<nav> 
+    <select id="nav" onchange="location = this.value;">
+        <option disabled selected>Select a page...</option>
+        <option value="index.html">Home</option>
+        <option value="aerobic-power.html">Aerobic Power</option>
+        <option value="aerobic-capacity.html">Aerobic Capacity</option>
+        <option value="anaerobic-capacity.html">Anaerobic Capacity</option>
+        <option value="anaerobic-power.html">Anaerobic Power</option>
+        <option value="strength.html">Strength</option>
+    </select>
+</nav>
+    </header>
+
+    <main>
+        <section>
+        <h2>Strength Training</h2>
+            <p>Strength training is fundamental for climbers, enhancing overall muscle power and stability, which are key for both climbing and bouldering. This type of training focuses on building the muscle strength necessary for executing moves that require significant force, such as gripping small holds, pulling up on overhangs, and maintaining body tension on slabs. Improved muscle strength also aids in injury prevention by providing better support to joints and tendons. Additionally, strength training contributes to a climber's endurance, as stronger muscles can perform climbing movements more efficiently, conserving energy and reducing fatigue during longer climbs or multiple bouldering attempts.</p>
+        </section>
+
+        <section>
+            <h2>Exercises for Strength</h2>
+            <ul id="exerciseList" data-energy-system="Strength">
+                <!-- Exercises will be dynamically loaded here -->
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>2023 - Ted Bergstrand</p>
+    </footer>
+    <script src="loadExercises.js"></script>
+    <script>
+    function changeExercise(selectElement) {
+        const selectedExercise = selectElement.value;
+        const exerciseURL = `exercise.html?name=${encodeURIComponent(selectedExercise)}`;
+        window.location.href = exerciseURL;
+    };
+    </script>
+</body>
+</html>
